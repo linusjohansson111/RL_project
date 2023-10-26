@@ -2,7 +2,7 @@
 #include "Game/Game.hpp"
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(600, 600), "RL game");
+    sf::RenderWindow window(sf::VideoMode(512, 256), "RL game");
     Game game(window);
     
     while (window.isOpen()) {
