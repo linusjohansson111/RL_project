@@ -2,6 +2,8 @@
 
 #include <SFML/Graphics.hpp>
 #include "Map/Map.hpp"
+#include "Object/Entity/Player/Player.hpp"
+
 using namespace std;
 
 class Wilderness {
@@ -15,4 +17,5 @@ private:
     sf::RenderWindow& window;
     const int level [128];
     Map map;
+    Player player;
 };
