@@ -1,5 +1,5 @@
 #include "Wilderness.hpp"
-// #include "Map/map.hpp"
+#include "Map/map.hpp"
 
 
 // Wilderness::Wilderness() {
@@ -18,19 +18,23 @@ Wilderness::Wilderness( sf::RenderWindow& window) :
         2, 0, 1, 0, 3, 0, 2, 2, 2, 0, 1, 1, 1, 1, 1, 1,
         0, 0, 1, 0, 3, 2, 2, 2, 0, 0, 0, 0, 1, 1, 1, 1,
     },
-                        map(new Map) {
-    window.setFramerateLimit(60);
+                        map() {
+
+    // map.load("Map/texture_map.png", sf::Vector2u(32, 32), level, 16, 8);
 
 }
 
 
 void Wilderness::render() {
+    map.load("./Game/Wilderness/Map/texture_map.png", sf::Vector2u(32, 32), level, 16, 8);
+    window.setFramerateLimit(60);
     window.clear();
     // rita allt annat
     // draw
 
-    sf::RectangleShape test(sf::Vector2f(10, 10));
-    window.draw(test);
+    // sf::RectangleShape test(sf::Vector2f(10, 10));
+    // window.draw(test);
+    window.draw(map);
 
     window.display();
 }
